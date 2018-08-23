@@ -1,0 +1,7 @@
+/* work.module.css */
+@import '../../css/variables.css';
+
+.work {
+    background: var(--colorBlack);
+    color: var(--colorWhite);
+  }

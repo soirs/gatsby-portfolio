@@ -1,0 +1,19 @@
+/* Work.css */
+
+.work {
+    /* background-color: white; */
+    /* color: black; */
+    color: white;
+}
+
+.work  p {
+    /* color: white; */
+}
+
+.hidden {
+    display: none;
+}
+
+.muted {
+    color: grey;
+}

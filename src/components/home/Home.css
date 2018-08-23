@@ -1,0 +1,33 @@
+a:hover {
+  color: #e8112d;
+}
+
+.home {
+  width: 100vw;
+  height: 80vh;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home p {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+/* Welcome message */
+.home__message-time {
+  color: rgba(255,255,255,.2);
+}
+
+/* Social icons bottom */
+.social a {
+  margin-right: 45px;
+}
+
+a .some__icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.6875rem;
+  height: 2.6875rem;
+}

@@ -1,0 +1,46 @@
+@import '../../css/variables.css';
+@import '../../css/animate.css';
+
+.header {
+  background: var(--colorBlack);
+  color: var(--colorWhite);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: var(--headerHeight);
+  z-index: var(--zIndexHeader);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--headerHeight);
+  }
+
+  .title {
+    /* font-family: Medium, Arial, Helvetica, sans-serif; */
+    font-size: 1.125rem;
+  }
+
+  .menu {
+      display: flex;
+      justify-content: space-around;
+      width: 150px;
+  }
+
+  .link:hover {
+      text-decoration: underline;
+  }
+
+  @media (--small) {
+    .title {
+      font-size: 1.285rem;
+    }
+  }
+
+
+
+
+

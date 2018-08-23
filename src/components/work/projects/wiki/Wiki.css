@@ -1,0 +1,57 @@
+.wikipedia {
+    max-width: 70vw;
+    margin: 0 auto;
+}
+
+.wiki__img{
+    filter: invert(100%);
+    width: 50%;
+    margin: 5vh auto;
+    display: block;
+}
+
+#wiki__search {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+#wiki__textbox {
+    background-color: rgb(22, 22, 22);
+    border: none;
+    padding: 10px;
+    color: white;
+    text-transform: capitalize;
+}
+#wiki__textbox:focus {
+    /* background-color: white; */
+}
+
+.wiki__searchHistory {
+    color:grey;
+}
+#wiki__button {
+    background-color: rgb(51, 51, 51);
+    border: none;
+    border-left: 1px dotted white;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.wiki__result {
+    padding-left: 10px;
+    list-style-type: upper-roman;
+}
+
+.wiki__result-spacing{
+    letter-spacing: 1.2px;
+}
+
+.wiki__result:hover {
+    padding-left: 7px;
+    border-left: 3px solid red;
+}
+
+
+#searchResults {
+    max-width: 50vw;
+    margin: 0 auto;
+
+}

@@ -1,0 +1,36 @@
+/* index.module.css */
+@import '../css/variables.css';
+/* @import '../css/animate.css'; */
+
+.intro {
+    background: var(--colorBlack);
+    color: var(--colorWhite);
+  }
+
+  .welcome {
+    color: grey;
+  }
+  
+  .intro h1 {
+    font-size: 2.75rem;
+  }
+
+  .link {
+    border-bottom: 3px solid var(--colorWhite);
+  }
+
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2.6875rem;
+    height: 2.6875rem;
+  }
+  
+  @media (--small) {
+    .intro h1 {
+      font-size: 1.7142rem;
+    }
+    .link {
+      border-width: 2px;
+    }
+  }

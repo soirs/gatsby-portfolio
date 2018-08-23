@@ -1,0 +1,45 @@
+/* Quote.css */
+.quote__box {
+    max-width: 70%;
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    margin: 5vh auto;
+    position: relative;
+  }
+  
+  .quote__text {
+    font-size: 1.7rem;
+    padding-left: 20px;
+    border-left: 3px solid white;
+  }
+  
+  .quote__author {
+    text-align: left;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 1.23rem;
+  }
+  
+  #quote__button {
+    cursor: pointer;
+    font-family: "europa", "PT Sans", "Avenir", Helvetica, Arial, sans-serif;
+    min-width: 20vw;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    padding: 4px 20px;
+    margin: 50px auto;
+    font-size: 1.23rem;
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 3px 0px 0px rgba(255, 255, 255, 1);
+    box-shadow: 0px 3px 0px 0px rgba(255, 255, 255, 1);
+  }
+  #quote__button:hover {
+    /* border: 1px solid red; */
+    color: red;
+    -webkit-box-shadow: 0px 3px 0px 0px red;
+    -moz-box-shadow: 0px 3px 0px 0px red;
+    box-shadow: 0px 3px 0px 0px red;
+  }
+  
