@@ -11,7 +11,7 @@
   .quote__text {
     font-size: 1.7rem;
     padding-left: 20px;
-    border-left: 3px solid white;
+    border-left: 3px solid black;
   }
   
   .quote__author {
@@ -37,9 +37,9 @@
   }
   #quote__button:hover {
     /* border: 1px solid red; */
-    color: red;
-    -webkit-box-shadow: 0px 3px 0px 0px red;
-    -moz-box-shadow: 0px 3px 0px 0px red;
-    box-shadow: 0px 3px 0px 0px red;
+    color: black;
+    background-color: white;
+
+
   }
   

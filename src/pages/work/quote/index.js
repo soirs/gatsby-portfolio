@@ -4,6 +4,10 @@ import React from "react";
 import "./Quote.css";
 import { Link } from "react-router-dom";
 
+import Fullscreen from '../../../components/fullscreen/fullscreen';
+import styles from './quote.module.css';
+import Wrapper from "../../../components/wrapper/wrapper";
+
 
 class Quote extends React.Component {
     state = {
@@ -21,7 +25,7 @@ class Quote extends React.Component {
     };
   
     componentWillMount() {
-      console.log(this.state.quote);
+      // console.log(this.state.quote);
     }
   
     storeQuote = data => {
@@ -45,20 +49,17 @@ class Quote extends React.Component {
     render() {
       return (
         <div>
-          <h3>
-            <Link to="/work" className="header__name">Work </Link>
-            > Quote Generator
-          </h3>
+          <Fullscreen className={styles.quote} firstItem>
+          <Wrapper>
           {
             <div>
               {this.state.quote.map(quote => (
                 <div className="quote__box" key={quote.ID}>
                   <div className="">
                     {/*Quote breaks /n at "."*/}
-                    <p
-                      className="quote__text"
+                    <p className="quote__text"
                       dangerouslySetInnerHTML={{
-                        __html: quote.content.split(".").join(".</br>")
+                        __html: quote.content.split(". ").join(".</br>")
                       }}
                     />
                     <a href={quote.link} target="_blank" alt="To QuotesOnDesign page for this quote">
@@ -76,6 +77,8 @@ class Quote extends React.Component {
               ))}
             </div>
           }
+          </Wrapper>
+        </Fullscreen>
         </div>
       );
     }

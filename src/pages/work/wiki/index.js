@@ -1,9 +1,11 @@
 // Wiki.js
 
 import React from "react";
-import "./Wiki.css";
-import { Link } from "react-router-dom";
 import imgWikipedia from "./gfx/wikipedia.png";
+
+import Fullscreen from '../../../components/fullscreen/fullscreen';
+import styles from './wiki.module.css';
+import Wrapper from "../../../components/wrapper/wrapper";
 
 class Wiki extends React.Component {
     state = {
@@ -38,10 +40,10 @@ class Wiki extends React.Component {
 
     fetchWiki = () => {
 
-        this.removeElementsByClassName("wiki__result");
+        this.removeElementsByClassName("result");
 
         // Clears textbox on buttonclick not enter keypress
-        document.getElementById('wiki__textbox').value = '';
+        document.getElementsByClassName('textbox').value = '';
         
         // this.setState({search: ''});
         // console.log(this.state.search);
@@ -51,7 +53,7 @@ class Wiki extends React.Component {
     }
     // CWM. On component open it displays "Minimalism"
       init() {
-        this.removeElementsByClassName("wiki__result");
+        this.removeElementsByClassName("result");
         let searchResults = document.getElementById('searchResults');
         let api = `https://en.wikipedia.org/w/api.php?action=opensearch&origin=*&limit=4&search=${this.state.search}&utf8=1&format=json`;
 
@@ -68,12 +70,12 @@ class Wiki extends React.Component {
               console.log(data);
             for(var i=0; i < data[1].length; i++){
                 var li = document.createElement('li');
-                li.className = "wiki__result";
+                li.className = "result";
                 //LOG TO CONSOLE
                 //console.log(data);
 
                 li.innerHTML = 
-                "<p class='wiki__result-spacing'><strong><a class='underline' href=" + data[3][i]+" target='_blank'>" + data[1][i]+ "</a></strong><p>" + data[2][i] + "</p></p>";
+                "<p class='result__title'><strong><a class='underline' href=" + data[3][i]+" target='_blank'>" + data[1][i]+ "</a></strong><p>" + data[2][i].substring(0,150) + "...</p></p>";
                 searchResults.appendChild(li);
             }
           })
@@ -107,41 +109,40 @@ class Wiki extends React.Component {
 
     render() {
         return(
-
-            <section className="wiki">
-            <h3>
-            <Link to="/work" className="header__name">Work </Link>
-            > Wikipedia Lookup
-            </h3>
+            <section>
+            <Fullscreen className={styles.wiki} firstItem>
+            <Wrapper>
+  
         <div className="wikipedia">
 
-        <img className="wiki__img" src={imgWikipedia} alt=""/>
+        <img src={imgWikipedia} alt="Wikipedia Searcher"/>
 
-        <div id="wiki__search">
+        <div id={styles.searchForm}>
         <form onSubmit={this.handleSubmit}>
                 <input
                 type="text"
                 autoFocus
-                id="wiki__textbox"
+                className={styles.textbox}
                 placeholder={this.state.search}
                 ref="filterTextInput"
                 // value={this.state.search}
                 // onFocus="this.value=''"
                 onChange={this.handleChange}
               />
-              <button id="wiki__button" type="button" className="wiki__button" onClick={this.fetchWiki}> Search </button>
+              <button type="button" className={styles.button} onClick={this.fetchWiki}> Search </button>
         </form>
               
-        <p className="wiki__searchHistory">You've been searching for: <br/><i>{this.state.prior.slice(Math.max(this.state.prior.length - 3, 1))}</i> </p>
+        <p className={styles.history}>You've been searching for: <br/><i>{this.state.prior.slice(Math.max(this.state.prior.length - 3, 1))}</i> </p>
 
 
         </div>
-            <ul id="searchResults"></ul>
+            <ol id="searchResults" className={styles.searchList}></ol>
 
             </div>
             
-{/*<iframe height='383' scrolling='no' title='Wikipedia Lookup Generator FreeCodeCamp Frontend' src='//codepen.io/hoima/embed/NBXYVM/?height=383&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style={{width: '100%'}}>See the Pen <a href='https://codepen.io/hoima/pen/NBXYVM/'>Wikipedia Lookup Generator FreeCodeCamp Frontend</a> by Frank Richard Semakula (<a href='https://codepen.io/hoima'>@hoima</a>) on <a href='https://codepen.io'>CodePen</a>.
-        </iframe>*/}
+
+      </Wrapper>
+        </Fullscreen>
             </section>
         )
     }

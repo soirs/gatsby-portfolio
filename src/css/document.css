@@ -20,7 +20,7 @@
 
   .underline {
         text-decoration: underline;
-        color: white;
+        /* color: white; */
   }
 
   ::selection {

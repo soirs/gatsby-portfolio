@@ -22,7 +22,8 @@
 .link:hover {
   border-bottom: 1px solid black;
 }
-ul {
+
+.social {
   list-style-type: none;
   padding: 0;
 }

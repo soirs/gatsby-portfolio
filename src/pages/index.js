@@ -24,7 +24,7 @@ const IndexPage = () => (
        This is my playground.
        <br/>
        <br/>
-       Here´s my <Link className={styles.link} to="/work/">work</Link>.
+       Here's my <Link className={styles.link} to="/work/">work</Link>.
     </h1>
    </Wrapper>
    </Fullscreen>

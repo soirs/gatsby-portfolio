@@ -38,7 +38,7 @@ const Work = () => (
 
             <div className="project quote">
             <h2 className="underline">
-                <Link to="./Quote">Quote Generator</Link>
+                <Link to="/work/quote">Quote Generator</Link>
             </h2>
             <p>Uses <a href="https://www.quotesondesign.com" className="underline" target="_blank" rel="noopener noreferrer">QuotesOnDesign</a> API to fetch content</p>
             </div>
@@ -47,18 +47,10 @@ const Work = () => (
 
             <div className="project wiki">
             <h2 className="underline">
-                <Link to="./Wiki">Wikipedia Searcher</Link>
+                <Link to="/work/wiki">Wikipedia Searcher</Link>
                 </h2>  
             </div>
-
-            <div className="project hidden">
-            <h2 className="underline">
-                <a href="https://old.frankrs.dk" className="underline" target="_blank" rel="noopener noreferrer">Old Portfolio</a> 
-                </h2>  
-            </div>
-
-
-            
+                        
         </div>
         </Wrapper>
         </Fullscreen>

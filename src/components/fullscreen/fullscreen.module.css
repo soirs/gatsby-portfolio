@@ -1,6 +1,6 @@
 /* components/fullscreen/fullscreen.modules.css */
 @import '../../css/variables.css';
-@import '../../css/animate.css';
+/* @import '../../css/animate.css'; */
 
 .fullscreen {
     width: 100vw;
